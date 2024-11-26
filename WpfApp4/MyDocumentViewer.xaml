@@ -7,24 +7,29 @@
         xmlns:local="clr-namespace:WpfApp4"
         mc:Ignorable="d"
         Title="MyDocumentViewer" Height="450" Width="800">
+    <Window.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.New" Executed="NewCommand_Executed"/>
+        <CommandBinding Command="ApplicationCommands.Open" Executed="OpenCommand_Executed"/>
+        <CommandBinding Command="ApplicationCommands.Save" Executed="SaveCommand_Executed"/>
+    </Window.CommandBindings>
     <Grid>
         <DockPanel LastChildFill="False">
             <ToolBarTray Height="40" VerticalAlignment="Top" HorizontalAlignment="left" DockPanel.Dock="Top" Background="Bisque">
                 <ToolBar x:Name="applicationToolBar" Height="40" Width="180" Background="Ivory">
-                    <Button x:Name="newButton" Height="38" Width="38">
+                    <Button x:Name="newButton" Command="ApplicationCommands.New" Height="38" Width="38">
                         <Image Width="32" Height="32" Source="/new.png"/>
                     </Button>
-                    <Button x:Name="openButton" Height="38" Width="38">
+                    <Button x:Name="openButton" Command="ApplicationCommands.Open" Height="38" Width="38">
                         <Image Width="32" Height="32" Source="/open.png"/>
                     </Button>
-                    <Button x:Name="saveButton" Height="38" Width="38">
+                    <Button x:Name="saveButton" Command="ApplicationCommands.Save" Height="38" Width="38">
                         <Image Width="32" Height="32" Source="/save.png"/>
                     </Button>
                     <Button x:Name="trashButton" Height="38" Width="38">
                         <Image Width="32" Height="32" Source="/trash.png"/>
                     </Button>
                 </ToolBar>
-                <ToolBar x:Name="editingToolBar" Width="400">
+                <ToolBar x:Name="editingToolBar" Width="408">
                     <ToggleButton x:Name="boldButton" Height="38" Width="38">
                         <Image Width="32" Height="32" Source="/bold.png"/>
                     </ToggleButton>
@@ -35,9 +40,14 @@
                         <Image Width="32" Height="32" Source="/underline.png"/>
                     </ToggleButton>
                     <xctk:ColorPicker x:Name="fontColorPicker" Width="100" Height="32" VerticalAlignment="Center" DisplayColorAndName="True"/>
-                    
+                    <ComboBox x:Name="fontFamilyComboBox" HorizontalAlignment="Left" VerticalAlignment="Center" Width="100" Height="32" Margin="10,0,0,0"/>
+                    <ComboBox x:Name="fontSizeComboBox" HorizontalAlignment="Left" VerticalAlignment="Center" Width="50" Height="32" Margin="10,0,0,0"/>
                 </ToolBar>
             </ToolBarTray>
+            <RichTextBox x:Name="rtbEditor" Background="#FFEBEDC3">
+                <FlowDocument/>
+            </RichTextBox>
+            
         </DockPanel>
     </Grid>
 </Window>
