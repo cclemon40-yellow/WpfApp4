@@ -1,0 +1,18 @@
+﻿<Window x:Class="WpfApp4.MyDocumentViewer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp4"
+        mc:Ignorable="d"
+        Title="MyDocumentViewer" Height="450" Width="800">
+    <Grid>
+        <DockPanel LastChildFill="False">
+            <ToolBarTray Height="40" VerticalAlignment="Top" HorizontalAlignment="left" DockPanel.Dock="Top" Background="Bisque">
+                <ToolBar x:Name="applicationToolBar" Height="40" Width="260" Background="Ivory">
+                    <Button x:Name="newButton" Content="new" Height="38" Width="38"/>
+                </ToolBar>
+            </ToolBarTray>
+        </DockPanel>
+    </Grid>
+</Window>

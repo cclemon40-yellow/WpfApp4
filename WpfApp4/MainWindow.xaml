@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp4"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="2024小作家Ver1" Height="450" Width="800">
     <Grid>
+        <Button Content="開啟新文件" HorizontalAlignment="Left" Margin="176,97,0,0" VerticalAlignment="Top" Height="64" Width="124" FontSize="20" FontWeight="Bold" Click="Button_Click"/>
+
 
     </Grid>
 </Window>

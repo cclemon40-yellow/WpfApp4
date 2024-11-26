@@ -20,5 +20,11 @@ namespace WpfApp4
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MyDocumentViewer myDocumentViewer = new MyDocumentViewer();
+            myDocumentViewer.Show();
+        }
     }
 }
