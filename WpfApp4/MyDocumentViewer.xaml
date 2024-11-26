@@ -1,4 +1,5 @@
 ﻿<Window x:Class="WpfApp4.MyDocumentViewer"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -9,8 +10,32 @@
     <Grid>
         <DockPanel LastChildFill="False">
             <ToolBarTray Height="40" VerticalAlignment="Top" HorizontalAlignment="left" DockPanel.Dock="Top" Background="Bisque">
-                <ToolBar x:Name="applicationToolBar" Height="40" Width="260" Background="Ivory">
-                    <Button x:Name="newButton" Content="new" Height="38" Width="38"/>
+                <ToolBar x:Name="applicationToolBar" Height="40" Width="180" Background="Ivory">
+                    <Button x:Name="newButton" Height="38" Width="38">
+                        <Image Width="32" Height="32" Source="/new.png"/>
+                    </Button>
+                    <Button x:Name="openButton" Height="38" Width="38">
+                        <Image Width="32" Height="32" Source="/open.png"/>
+                    </Button>
+                    <Button x:Name="saveButton" Height="38" Width="38">
+                        <Image Width="32" Height="32" Source="/save.png"/>
+                    </Button>
+                    <Button x:Name="trashButton" Height="38" Width="38">
+                        <Image Width="32" Height="32" Source="/trash.png"/>
+                    </Button>
+                </ToolBar>
+                <ToolBar x:Name="editingToolBar" Width="400">
+                    <ToggleButton x:Name="boldButton" Height="38" Width="38">
+                        <Image Width="32" Height="32" Source="/bold.png"/>
+                    </ToggleButton>
+                    <ToggleButton x:Name="italicButton" Height="38" Width="38">
+                        <Image Width="32" Height="32" Source="/italic.png"/>
+                    </ToggleButton>
+                    <ToggleButton x:Name="underlineButton" Height="38" Width="38">
+                        <Image Width="32" Height="32" Source="/underline.png"/>
+                    </ToggleButton>
+                    <xctk:ColorPicker x:Name="fontColorPicker" Width="100" Height="32" VerticalAlignment="Center" DisplayColorAndName="True"/>
+                    
                 </ToolBar>
             </ToolBarTray>
         </DockPanel>
