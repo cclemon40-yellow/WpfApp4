@@ -25,7 +25,7 @@
                     <Button x:Name="saveButton" Command="ApplicationCommands.Save" Height="38" Width="38">
                         <Image Width="32" Height="32" Source="/save.png"/>
                     </Button>
-                    <Button x:Name="trashButton" Height="38" Width="38">
+                    <Button x:Name="trashButton" Height="38" Width="38" Click="trashButton_Click">
                         <Image Width="32" Height="32" Source="/trash.png"/>
                     </Button>
                 </ToolBar>
